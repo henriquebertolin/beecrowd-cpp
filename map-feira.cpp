@@ -22,8 +22,12 @@ int main() {
             string teste;
             int qtd;
             cin >> teste >> qtd;
-            soma += (frutas[teste] * qtd);
-                //cout << soma;
+            for(auto c : frutas) {
+                if (c.first == teste) {
+                    soma += (c.second * qtd);
+                    //cout << soma;
+                }
+            }
         }
         cout << fixed << setprecision(2) << "R$ "<< soma << endl;
     }
